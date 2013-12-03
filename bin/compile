@@ -141,7 +141,7 @@ fi
 
 # Install dependencies with Pip.
 puts-step "Installing dependencies using pip ($(pip --version | awk '{print $2}'))"
-pip install --use-mirrors -r requirements.txt --exists-action=w --src=./.heroku/src | cleanup | indent
+pip install -r requirements.txt --exists-action=w --src=./.heroku/src | cleanup | indent
 
 # Django collectstatic support.
 if [ "$NAME" = "Python/Django" ]; then
